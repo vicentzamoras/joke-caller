@@ -1,0 +1,35 @@
+{
+  "manifest_version": "1",
+  "id": "joke-caller",
+  "name": "Joke Caller",
+  "authors": [
+    {
+      "name": "Vicente Zamora",
+      "url": "https://github.com/vicentzamoras"
+    }
+  ],
+  "project_urls": {
+    "Homepage": "https://github.com/vicentzamoras/joke-caller",
+    "Issues": "https://github.com/vicentzamoras/joke-caller/issues"
+  },
+  "description": "A chat model that calls someone by name and tells them a joke.",
+  "version": "1.0.0",
+  "min_app_version": "0.10.0",
+  "components": [
+    {
+      "class": "joke_caller:JokeCallerTask",
+      "type": "GenerativeTask"
+    },
+    {
+      "class": "joke_caller:JokeCallerModel",
+      "type": "GenerativeModel"
+    }
+  ],
+  "settings": "joke_caller:Settings",
+  "dependencies": [
+    "pyjokes>=0.6"
+  ],
+  "plugin_dependencies": [
+    "shout-chat>=1.0.0"
+  ]
+}
